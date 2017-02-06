@@ -1,0 +1,1 @@
+![image](https://github.com/cjg125/postcss-sprite/raw/master/sprite.gif)

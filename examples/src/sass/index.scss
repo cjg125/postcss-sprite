@@ -1,0 +1,24 @@
+body {
+  background: url(../img/1.png);
+  font-size: 14px;
+  div {
+    background: url(../img/2.png) no-repeat;
+    font-size: 16px;
+  }
+  span {
+    background-image: url(../img/3.png);
+    font-size: 16px;
+  }
+  em {
+    background: #999 url(../img/1.png);
+    font-size: 16px;
+  }
+  i {
+    background: #999 url(http://www.test.com/1.png);
+    font-size: 16px;
+  }
+  a {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBp");
+    font-size: 16px;
+  }
+}
