@@ -31,7 +31,7 @@ $ npm install postcss-sprite --save-dev
             }
           })
         ]))
-        .pipe(gulp.dest('./examples/build/css'))
+        .pipe(gulp.dest('./build/css'))
     })
     ```
   - ### 结合 gulp-sass
