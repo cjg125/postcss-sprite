@@ -12,9 +12,12 @@ gulp.task('sass', () => {
     .pipe(postcss([
       sprite({
         imagePath: './examples/src/img',
-        spritePath: "./examples/build/img" // sprite 图片输出路径
+        spriteName: 'sprite.png',
+        spritePath: "./examples/build/img",
+        spritesmithOptions: {
+          padding: 2
+        }
       })
     ]))
     .pipe(gulp.dest('./examples/build/css'))
 })
-

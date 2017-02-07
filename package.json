@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "gulp sass"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
     "gulp-postcss": "^6.3.0",
     "gulp-sass": "^3.1.0",
     "mkdirp": "^0.5.1",
