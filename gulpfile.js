@@ -11,7 +11,8 @@ gulp.task('sass', () => {
     }).on('error', sass.logError))
     .pipe(postcss([
       sprite({
-        imagePath: './examples/src/img',
+        basePath: './examples/src/img',
+        cssImagePath:'../img/',
         spriteName: 'sprite.png',
         spritePath: "./examples/build/img",
         spritesmithOptions: {

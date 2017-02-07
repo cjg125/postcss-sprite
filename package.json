@@ -1,7 +1,7 @@
 {
   "name": "postcss-sprite",
   "description": "postcss-plugin sprite",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {

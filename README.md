@@ -23,7 +23,8 @@ $ npm install postcss-sprite --save-dev
       return gulp.src('*.css')
         .pipe(postcss([
           sprite({
-            imagePath: './src/img',
+            basePath: './src/img',
+            cssImagePath:'../img',
             spriteName: 'sprite.png',
             spritePath: "./build/img",
             spritesmithOptions: {
@@ -43,7 +44,7 @@ $ npm install postcss-sprite --save-dev
 
 ## API
 
-  - imagePath
+  - basePath
     - background-image 为绝对路径的时候
       - path.join
     - background-image 为相对地址的时候
@@ -56,6 +57,10 @@ $ npm install postcss-sprite --save-dev
   - spritePath
     - 生成精灵图的路径
     - 默认 "./"
+
+  - cssImagePath
+    - 如果声明会替换css文件里图片的路径部分，否则仅仅替换文件名
+    - 默认 undefined
 
   - spritesmithOptions
     - [spritesmith](https://github.com/Ensighten/spritesmith#spritesheetprocessimagesimages-options)
