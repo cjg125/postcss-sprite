@@ -15,11 +15,16 @@ $ npm install postcss-sprite --save-dev
 ## 快速上手
 
   - ### 在gulp中使用
+    ```bash
+    npm install gulp-cli -g
+    npm install gulp gulp-postcss postcss-sprite --save-dev
+    ```
 
     ```js
     const gulp = require('gulp')
+    const postcss = require('gulp-postcss')
     const sprite = require('postcss-sprite')
-    gulp.task('sass', () => {
+    gulp.task('css', () => {
       return gulp.src('*.css')
         .pipe(postcss([
           sprite({
