@@ -75,4 +75,5 @@ $ npm install postcss-sprite --save-dev
 
   - filter
     - 返回值 true | false
-    - 如果返回false 当前图片url 进行sprite超过
+    - 默认值 true
+    - 如果返回 false 当前图片url 不进行sprite操作
