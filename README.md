@@ -29,7 +29,10 @@ $ npm install postcss-sprite --save-dev
             spritePath: "./build/img",
             spritesmithOptions: {
               padding: 2
-            }
+            },
+            filter: function(url) {
+              return !!~url.indexOf('/src/')
+            },
           })
         ]))
         .pipe(gulp.dest('./build/css'))
@@ -64,3 +67,7 @@ $ npm install postcss-sprite --save-dev
 
   - spritesmithOptions
     - [spritesmith](https://github.com/Ensighten/spritesmith#spritesheetprocessimagesimages-options)
+
+  - filter
+    - 返回值 true | false
+    - 如果返回false 当前图片url 进行sprite超过

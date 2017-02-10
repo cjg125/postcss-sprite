@@ -12,9 +12,12 @@ gulp.task('sass', () => {
     .pipe(postcss([
       sprite({
         basePath: './examples/src/img',
-        cssImagePath:'../img/',
+        cssImagePath: '../img',
         spriteName: 'sprite.png',
         spritePath: "./examples/build/img",
+        filter: function(url) {
+          return !!~url.indexOf('/src/')
+        },
         spritesmithOptions: {
           padding: 2
         }
