@@ -84,7 +84,7 @@ $ npm install postcss-sprite --save-dev
 
 ## 更新记录
   - v1.4.0 (2017-05-25)
-    - 支持移动端的 background-size 图片命名 xxx@2x.jpg xxx@3x.jps
+    - 支持移动端的 background-size 图片命名 xxx@2x.jpg xxx@3x.jpg
 
     - 支持 rem 单位 设置 baseSize 参数
 
