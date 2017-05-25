@@ -1,24 +1,31 @@
-body {
-  background: url(../img/ico.png);
-  font-size: 14px;
-  div {
-    background: url(../img/src/2.png) no-repeat;
-    font-size: 16px;
-  }
-  span {
-    background-image: url(../img/src/3.png);
-    font-size: 16px;
-  }
-  em {
-    background: #999 url(../img/src/1.png);
-    font-size: 16px;
-  }
-  i {
-    background: #999 url(http://www.test.com/1.png);
-    font-size: 16px;
-  }
-  a {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBp");
-    font-size: 16px;
-  }
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 10px;
+}
+
+.a {
+  /* no sprites */
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/ico.png')
+}
+
+.b {
+  background-image: url('../img/src/1@2x.png')
+}
+
+.c {
+  background-image: url('../img/src/2.png')
+}
+
+.d {
+  background-image: url('../img/src/3.png')
 }

@@ -28,6 +28,7 @@ $ npm install postcss-sprite --save-dev
       return gulp.src('*.css')
         .pipe(postcss([
           sprite({
+            baseSize: 16,
             basePath: './src/img',
             cssImagePath:'../img',
             spriteName: 'sprite.png',
@@ -51,6 +52,9 @@ $ npm install postcss-sprite --save-dev
     [postcss](https://github.com/postcss/postcss#usage)
 
 ## API
+
+  - baseSize
+    - 如果设置那么单位会用 rem
 
   - basePath
     - background-image 为绝对路径的时候
@@ -77,3 +81,11 @@ $ npm install postcss-sprite --save-dev
     - 返回值 true | false
     - 默认值 true
     - 如果返回 false 当前图片url 不进行sprite操作
+
+## 更新记录
+  - v1.4.0 (2017-05-25)
+    - 支持移动端的 background-size 图片命名 xxx@2x.jpg xxx@3x.jps
+
+    - 支持 rem 单位 设置 baseSize 参数
+
+    - 默认添加宽高到生成的 css 里
