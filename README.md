@@ -5,7 +5,6 @@
   ![image](https://github.com/cjg125/postcss-sprite/raw/master/sprite.gif)
 
 ## 环境准备
-  > ~~nodejs >= 7.0.0~~
 
   > nodejs >= 8.0.0
 
@@ -58,12 +57,12 @@ $ npm install postcss-sprite --save-dev
 ## API
 
   - baseSize
-    - 图片如果以 (xxx@2x.jpg, xxx@3x.jpg, xxx@nx.xxx) 命名则 通过 baseSize 转换 为 rem 单位
+    - 图片如果以 (xxx@2x.jpg, xxx@3x.jpg, xxx@nx.xxx) 命名则 通过 baseSize 转换 为 rem 单位
     - 默认 16
 
   - source
 
-    - 以该值为相对目录查找图片合并
+    - 以该值为相对目录查找图片合并
     - 默认 "./"
 
   - file
