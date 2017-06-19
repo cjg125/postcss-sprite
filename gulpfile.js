@@ -43,7 +43,8 @@ gulp.task('sass', ['clean'], () => {
           },
           replaceUrl: function(url) {
             return '../sprite.png'
-          }
+          },
+          revision: true
         })
       ])
     )

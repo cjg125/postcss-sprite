@@ -1,6 +1,7 @@
 const { resolve, join, basename } = require('path')
 const { promisify } = require('util')
 const fse = require('fs-extra')
+const crypto = require('crypto')
 const spritesmith = promisify(require('spritesmith').run)
 
 const postcss = require('postcss')
@@ -38,7 +39,8 @@ module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
     output = './',
     filter = () => true,
     replaceUrl,
-    spritesmithOptions = {}
+    spritesmithOptions = {},
+    revision = true
   } = options
 
   output = join(output, file)
@@ -72,11 +74,17 @@ module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
       )
     )
       .then(async result => {
+        let rev = crypto.createHash('md5')
+        rev.update(result.image)
         await fse.outputFile(output, result.image)
-        return result
+        return {
+          rev: rev.digest('hex').slice(0, 10),
+          coordinates: result.coordinates,
+          properties: result.properties
+        }
       })
       .then(async result => {
-        let { coordinates, properties } = result
+        let { coordinates, properties, rev } = result
 
         // 先删除
         rules.forEach(rule => {
@@ -116,7 +124,13 @@ module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
               height /= size
             }
 
-            decl.value = `url("${replaceUrl(getUrl(url))}")`
+            let _url = replaceUrl(getUrl(url))
+
+            if (revision) {
+              _url += `?v=${rev}`
+            }
+
+            decl.value = `url("${_url}")`
 
             rule
               .insertAfter(0, {

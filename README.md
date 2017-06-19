@@ -33,6 +33,7 @@ $ npm install postcss-sprite --save-dev
             file: 'sprite.png',
             source: './src/img',
             output: "./build/img",
+            revision: true,
             spritesmithOptions: {
               padding: 2
             },
@@ -73,6 +74,11 @@ $ npm install postcss-sprite --save-dev
     - 生成精灵图的路径
     - 默认 "./"
 
+  - revision
+
+    - 以 sprite 图片的 md5 生成版本号
+    - 默认值 true
+
   - spritesmithOptions
     - [spritesmith](https://github.com/Ensighten/spritesmith#spritesheetprocessimagesimages-options)
 
@@ -87,6 +93,9 @@ $ npm install postcss-sprite --save-dev
 
 
 ## 更新记录
+  - v2.1.0 (2017-06-19)
+    - 添加 revision 选项,默认支持以 sprite 图片的 md5 值做版本号
+
   - v2.0.0 (2017-06-19)
     - 完美支持开发环境与发布环境的 rem 支持
     - 需要 nodejs>=8.0.0 (用到了 promisify)
