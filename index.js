@@ -34,7 +34,7 @@ function getDpr(url) {
 module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
   let {
     baseSize = 16,
-    file = 'sprite.png',
+    filename = 'sprite.png',
     source = './',
     output = './',
     filter = () => true,
@@ -43,8 +43,8 @@ module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
     revision = true
   } = options
 
-  output = join(output, file)
-  replaceUrl || (replaceUrl = url => url.replace(basename(url), file))
+  output = join(output, filename)
+  replaceUrl || (replaceUrl = url => url.replace(basename(url), filename))
 
   return root => {
     let rules = []
@@ -64,6 +64,10 @@ module.exports = postcss.plugin('postcss-sprite', (options = {}) => {
         rules.push(rule)
       })
     })
+
+    if (src.length == 0) {
+      return
+    }
 
     return spritesmith(
       Object.assign(

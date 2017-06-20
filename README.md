@@ -66,7 +66,7 @@ $ npm install postcss-sprite --save-dev
     - 以该值为相对目录查找图片合并
     - 默认 "./"
 
-  - file
+  - filename
     - 生成精灵图的名称
     - 默认 "sprite.png"
 
@@ -93,6 +93,10 @@ $ npm install postcss-sprite --save-dev
 
 
 ## 更新记录
+  - v2.2.0 (2017-06-20)
+    - 参数 file -> filename
+    - 修复没有图片合并时会生成一个空图片
+
   - v2.1.0 (2017-06-19)
     - 添加 revision 选项,默认支持以 sprite 图片的 md5 值做版本号
 

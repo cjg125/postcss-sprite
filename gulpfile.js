@@ -32,7 +32,7 @@ gulp.task('sass', ['clean'], () => {
       postcss([
         sprite({
           baseSize: 16,
-          file: 'sprite.png',
+          filename: 'sprite.png',
           source: './examples/src/img/',
           output: './examples/build/',
           spritesmithOptions: {
