@@ -30,7 +30,7 @@ $ npm install postcss-sprite --save-dev
         .pipe(postcss([
           sprite({
             baseSize: 16,
-            file: 'sprite.png',
+            filename: 'sprite.png',
             source: './src/img',
             output: "./build/img",
             revision: true,

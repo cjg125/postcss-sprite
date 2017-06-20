@@ -4,9 +4,6 @@
   "version": "2.2.0",
   "main": "index.js",
   "license": "MIT",
-  "engines": {
-    "engines": ">=8.0.0"
-  },
   "scripts": {
     "build": "gulp"
   },
