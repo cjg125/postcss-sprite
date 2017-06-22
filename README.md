@@ -93,6 +93,9 @@ $ npm install postcss-sprite --save-dev
 
 
 ## 更新记录
+  - v2.2.1 (2017-06-22)
+    - 添加正确的 package.json engines 选项
+
   - v2.2.0 (2017-06-20)
     - 参数 file -> filename
     - 修复没有图片合并时会生成一个空图片
