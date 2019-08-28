@@ -1,7 +1,7 @@
 {
   "name": "postcss-sprite",
   "description": "postcss-plugin sprite",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -17,15 +17,13 @@
   },
   "homepage": "https://github.com/cjg125/postcss-sprite",
   "dependencies": {
-    "fs-extra": "^3.0.1",
+    "fs-extra": "^8.1.0",
     "mkdirp": "^0.5.1",
-    "spritesmith": "^3.1.1"
+    "spritesmith": "^3.3.1"
   },
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0"
+    "postcss": "^7.0.17",
+    "precss": "^4.0.0"
   },
   "engines": {
     "node": ">= 8.0.0"
